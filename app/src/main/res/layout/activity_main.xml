@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/drawerlayout"
+    tools:context=".view.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+
+            android:background="#E33A05"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"></View>
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#E33A05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/imageviewopennavigation"
+                    android:src="@drawable/round_dehaze_24"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"></ImageView>
+
+                <TextView
+                    android:layout_toRightOf="@id/imageviewopennavigation"
+                    android:id="@+id/textviewusername"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="22dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:text="Загрузка..."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/relativelayoutbadge"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:id="@+id/imagevieworder"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:src="@drawable/round_shopping_bag_24"></ImageView>
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/badgecounter"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:background="@drawable/round_lens_24"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:layout_toLeftOf="@id/relativelayoutbadge"
+                    android:id="@+id/imageviewopenac2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="15dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:src="@drawable/round_add_24"></ImageView>
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <EditText
+            android:id="@+id/edittextsearch"
+            android:drawableRight="@drawable/round_search_24"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:padding="15dp"
+            android:background="@drawable/edtittextsearch"
+            android:textColorHint="#606F73"
+            android:hint="Поиск"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/recyclerviewcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/textvewproducttitle"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:text="Продукты"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="10dp"
+            android:id="@+id/recyclerviewallproducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        app:headerLayout="@layout/headerlayout"
+        android:id="@+id/navigationview"
+        android:layout_gravity="start"
+        app:menu="@menu/formenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"></com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

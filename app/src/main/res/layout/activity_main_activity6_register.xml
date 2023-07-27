@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity6Register">
+
+    <View
+        android:background="#E33A05"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"></View>
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="#E33A05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:text="Online Магазин"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Online Магазин"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@color/white"
+            android:id="@+id/edittextregname"
+            android:textColorHint="@color/white"
+            android:hint="Имя"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/editextbackgroundloginandregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <EditText
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edittextregsurname"
+            android:textColorHint="@color/white"
+            android:hint="Фамилия"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/editextbackgroundloginandregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <EditText
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edittextregphone"
+            android:textColorHint="@color/white"
+            android:hint="Номер телефона"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/editextbackgroundloginandregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <EditText
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edittextregaddress"
+            android:textColorHint="@color/white"
+            android:hint="Адрес"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/editextbackgroundloginandregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <EditText
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edittextreglogin"
+            android:textColorHint="@color/white"
+            android:hint="Логин"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/editextbackgroundloginandregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <EditText
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edittextregpassword"
+            android:textColorHint="@color/white"
+            android:hint="Пароль"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/editextbackgroundloginandregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="15dp"
+        android:id="@+id/buttonaddcategories"
+        android:text="Создать"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:background="@drawable/buttonbackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+
+</LinearLayout>

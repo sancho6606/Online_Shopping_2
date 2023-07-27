@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".view.MainActivity3">
+
+    <View
+        android:background="#E33A05"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"></View>
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="#E33A05"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/backm3"
+            android:src="@drawable/round_chevron_left_24"
+            android:layout_width="40dp"
+            android:layout_height="40dp"></ImageView>
+
+        <RelativeLayout
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textviewcategorynametitle"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="Загрузка..."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleimageviewcategory"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/noimage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/noimage"
+                    android:id="@+id/imageviewopengalleryproduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"></ImageView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@id/imageviewopengalleryproduct"
+                    android:id="@+id/recyclerviewselectimages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                <ProgressBar
+                    android:layout_below="@id/recyclerviewselectimages"
+                    android:indeterminate="true"
+                    android:indeterminateTintMode="src_atop"
+                    android:indeterminateTint="#E33A05"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/progressbaruploadproduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:visibility="gone"></ProgressBar>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginLeft="15dp"
+                    android:text="0%"
+                    android:layout_below="@id/progressbaruploadproduct"
+                    android:id="@+id/textviewprogressproduct"
+                    android:textSize="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_marginVertical="5dp"
+                    android:id="@+id/edittextproductname"
+                    android:hint="Напишите название категории"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:background="@drawable/edittextbackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></EditText>
+
+                <EditText
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_marginVertical="5dp"
+                    android:id="@+id/edittextproductprice"
+                    android:hint="0 UZC"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:background="@drawable/edittextbackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></EditText>
+
+                <EditText
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_marginVertical="5dp"
+                    android:id="@+id/edittextproductdescription"
+                    android:hint="Информация"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:background="@drawable/edittextbackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></EditText>
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:enabled="false"
+                    android:id="@+id/buttonaddproduct"
+                    android:text="Создать"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/buttonbackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

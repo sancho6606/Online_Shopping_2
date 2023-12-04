@@ -121,7 +121,7 @@ class  RepositoryProduct constructor(
             override fun onDataChange(snapshot: DataSnapshot) {
                 arraylistallproducts.clear()
                 for (datasnapshot:DataSnapshot in snapshot.children){
-                    val productModel    =datasnapshot.getValue(ProductModel::class.java)
+                    val productModel=datasnapshot.getValue(ProductModel::class.java)
                     arraylistallproducts.add(productModel!!)
                 }
                 livedataallproducts.value=arraylistallproducts

@@ -135,10 +135,10 @@ class MainActivity : AppCompatActivity() {
 
             recyclerviewallproducts.layoutManager=GridLayoutManager(this@MainActivity,2)
 
-            productViewModel.readallproducts().observe(this@MainActivity,{
-                arraylistallproducts=it
-                it.shuffle()
-                allProductsAdapter= AllProductsAdapter(this@MainActivity,it)
+            productViewModel.readallproducts().observe(this@MainActivity,{prro->
+                arraylistallproducts=prro
+                prro.shuffle()
+                allProductsAdapter= AllProductsAdapter(this@MainActivity,prro)
                 recyclerviewallproducts.adapter=allProductsAdapter
             })
 
@@ -193,8 +193,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun categorychanged(categoryname:String){
-        productViewModel.readeverycategory(categoryname).observe(this@MainActivity,{
-            allProductsAdapter=AllProductsAdapter(this@MainActivity,it)
+        productViewModel.readeverycategory(categoryname).observe(this@MainActivity,{tro->
+            allProductsAdapter=AllProductsAdapter(this@MainActivity,tro)
                 binding.recyclerviewallproducts.adapter=allProductsAdapter
         })
     }
@@ -230,10 +230,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed(){
-        productViewModel.readallproducts().observe(this@MainActivity, {
-            arraylistallproducts = it
-            it.shuffle()
-            allProductsAdapter = AllProductsAdapter(this@MainActivity, it)
+        productViewModel.readallproducts().observe(this@MainActivity, {nlo->
+            arraylistallproducts = nlo
+            nlo.shuffle()
+            allProductsAdapter = AllProductsAdapter(this@MainActivity, nlo)
             binding.recyclerviewallproducts.adapter = allProductsAdapter
         })
     }

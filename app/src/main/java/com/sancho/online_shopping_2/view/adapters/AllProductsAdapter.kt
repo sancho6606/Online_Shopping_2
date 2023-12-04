@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.sancho.online_shopping_2.R
 import com.sancho.online_shopping_2.databinding.RecyclerviewItemallproductsBinding
 import com.sancho.online_shopping_2.model.ProductModel
 import com.sancho.online_shopping_2.view.MainActivity4

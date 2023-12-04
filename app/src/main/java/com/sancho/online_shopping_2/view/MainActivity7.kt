@@ -13,7 +13,7 @@ import com.sancho.online_shopping_2.view.adapters.FavoriteAdapter
 import com.sancho.online_shopping_2.viewmodel.ProductViewModel
 import java.util.Calendar
 
-class MainActivity7 : AppCompatActivity() {
+class   MainActivity7 : AppCompatActivity() {
     lateinit var binding: ActivityMain7Binding
     lateinit var productViewModel: ProductViewModel
     lateinit var favoriteAdapter: FavoriteAdapter
